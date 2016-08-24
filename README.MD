@@ -53,7 +53,6 @@ If you want to do database management with something like Sequel Pro you can use
 - MySQL Host *127.0.0.1*
 - Username *dev*
 - Password *dev*
-
 - SSH Host *Fill in the ip adress you've set in Vagrantfile*
 - SSH User *vagrant*
 - SSH Key *Point it to: ~/.vagrant.d/insecure_private_key*
@@ -66,6 +65,6 @@ Point your host file to the chosen url & ip adress. Should be something like thi
 Common errors
 -------------
 
-- *Vagrant cannot forward the specified ports on this VM ... * - Change the port number in your Vagrantfile
+- *Vagrant cannot forward the specified ports on this VM...* - Change the port number in your Vagrantfile
 
 - *NFS is reporting that your exports file is invalid...* - Run ```sudo rm /etc/exports && sudo touch /etc/exports```
