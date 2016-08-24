@@ -19,7 +19,7 @@ Import the box
 --------------
 Import the box by running:
 
-```vagrant box add ubuntu-16.04-php7-mysql-v1.0 ubuntu16.04-php7-mysql-v1.0.box```
+```vagrant box add ubuntu-16.04-php7-mysql-v1.0 ubuntu16-php7-mysql.box```
 
 This will save the box to ```~/.vagrant.d/boxes/ubuntu-16.04-php7-mysql-v1.0```
 
@@ -62,3 +62,10 @@ Change your host file
 ---------------------
 
 Point your host file to the chosen url & ip adress. Should be something like this: ```192.168.50.100  example.dev```. Then, run ```vagrant up``` and you should be good to go!
+
+Common errors
+-------------
+
+- *Vagrant cannot forward the specified ports on this VM ... * - Change the port number in your Vagrantfile
+
+- *NFS is reporting that your exports file is invalid...* - Run ```sudo rm /etc/exports && sudo touch /etc/exports```
