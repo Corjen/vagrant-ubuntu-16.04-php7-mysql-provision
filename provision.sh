@@ -20,9 +20,15 @@ server {
   index index.php;
 
   server_name example.dev;
+  sendfile off;
 
   location / {
-       	try_files $uri $uri/ /index.php?q=$request_uri;
+      try_files $uri $uri/ /index.php?q=$uri&$args;
+  }
+
+  location /wordpress {
+      index index.php;
+      try_files $uri $uri/ /index.php?q=$uri&$args;
   }
 
   # pass the PHP scripts to FastCGI server listening on /tmp/php7.0-fpm.sock
